@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Sistem Absensi Olahraga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🏃</div>
+                    <h1>Sistem Absensi Olahraga Digital</h1>
+                </div>
+                <p class="subtitle">Dinas Pendidikan dan Olahraga</p>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="back-btn">Kembali</a>
+                <a href="index.html" id="logoutBtn" class="nav-link">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="dashboard-header">
+                <div>
+                    <h2>Dashboard Administrator</h2>
+                    <p>Kelola data absensi olahraga siswa</p>
+                </div>
+            </div>
+            
+            <div class="dashboard-content">
+                <div class="card">
+                    <h3>Filter Data Absensi</h3>
+                    <form id="filterForm">
+                        <div class="filter-row">
+                            <div class="form-group">
+                                <label for="filterNama">Nama Siswa</label>
+                                <input type="text" id="filterNama" name="filterNama">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="filterTanggal">Tanggal</label>
+                                <input type="date" id="filterTanggal" name="filterTanggal">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="filterKelas">Kelas</label>
+                                <input type="text" id="filterKelas" name="filterKelas">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Terapkan Filter</button>
+                            <button type="button" id="resetFilter" class="btn btn-secondary">Reset Filter</button>
+                            <button type="button" id="exportBtn" class="btn btn-success">Export Data</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="card">
+                    <h3>Data Absensi</h3>
+                    <div class="table-container">
+                        <table id="absensiTable" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Kelas</th>
+                                    <th>Mata Pelajaran</th>
+                                    <th>Tanggal</th>
+                                    <th>Waktu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data akan diisi oleh JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Dinas Pendidikan dan Olahraga. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
